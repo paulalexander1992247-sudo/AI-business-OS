@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f5f1">
+    <title>Northstar | AI Business OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="src/main.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#dashboard" aria-label="Northstar home">
+          <span class="brand-mark">N</span>
+          <span><strong>northstar</strong><small>AI BUSINESS OS</small></span>
+        </a>
+        <div class="workspace-switcher">
+          <span class="workspace-icon">A</span>
+          <span><strong>Acme Studio</strong><small>Growth workspace</small></span>
+          <span class="switch-chevron">⌄</span>
+        </div>
+        <p class="nav-caption">WORKSPACE</p>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <button class="nav-item active" data-view="dashboard"><span class="nav-icon">◫</span>Dashboard</button>
+          <button class="nav-item" data-view="leads"><span class="nav-icon">◎</span>Leads<span class="nav-count" id="lead-count">0</span></button>
+          <button class="nav-item" data-view="workflows"><span class="nav-icon">⌘</span>Workflows</button>
+          <button class="nav-item" data-view="agents"><span class="nav-icon">✳</span>AI Agents</button>
+          <button class="nav-item" data-view="approvals"><span class="nav-icon">▣</span>Approvals<span class="nav-count alert-count" id="approval-count">0</span></button>
+          <button class="nav-item" data-view="activity"><span class="nav-icon">≋</span>Activity log</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span>Settings</button>
+          <div class="sidebar-user"><span class="avatar avatar-green">JD</span><span><strong>Jordan Davis</strong><small>Workspace admin</small></span><span class="user-menu">···</span></div>
+        </div>
+      </aside>
+      <div class="main-column">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Acme Studio</span><span class="crumb-divider">/</span><strong id="crumb-current">Dashboard</strong></div>
+          <div class="topbar-actions"><span class="system-status"><i></i> All systems operational</span><button class="icon-button" aria-label="Notifications" title="Notifications">♧<b></b></button><span class="avatar avatar-dark">JD</span></div>
+        </header>
+        <main id="app" class="content" tabindex="-1"></main>
+      </div>
+    </div>
+    <input id="csv-input" type="file" accept=".csv,text/csv" hidden>
+  </body>
+</html>
